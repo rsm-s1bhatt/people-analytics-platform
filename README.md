@@ -3,7 +3,7 @@
 [![dbt CI](https://github.com/rsm-s1bhatt/people-analytics-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rsm-s1bhatt/people-analytics-platform/actions/workflows/ci.yml)
 
 **Docs and lineage:** [rsm-s1bhatt.github.io/people-analytics-platform](https://rsm-s1bhatt.github.io/people-analytics-platform/)  
-**Dashboard:** [`dashboard/People_Analytics_Dashboard.twbx`](dashboard/People_Analytics_Dashboard.twbx) (Tableau)
+**Live dashboard:** [Tableau Public](https://public.tableau.com/app/profile/shivang.bhatt3199/viz/People_Analytics_Dashboard_17920861709710/PeopleAnalytics) (workbook file: [`dashboard/People_Analytics_Dashboard.twbx`](dashboard/People_Analytics_Dashboard.twbx))
 
 A tested, documented data platform for recruiting and workforce analytics. It is built with dbt on DuckDB and checked automatically by GitHub Actions on every pull request.
 
