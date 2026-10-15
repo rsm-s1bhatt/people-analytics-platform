@@ -1,0 +1,124 @@
+requisition_id,department,job_role,level_band,opened_date
+REQ0001,Human Resources,Human Resources,entry,2024-04-24
+REQ0002,Human Resources,Human Resources,entry,2025-06-29
+REQ0003,Human Resources,Human Resources,entry,2024-02-15
+REQ0004,Human Resources,Human Resources,entry,2024-11-27
+REQ0005,Human Resources,Manager,senior,2025-01-15
+REQ0006,Human Resources,Manager,senior,2024-07-31
+REQ0007,Research & Development,Healthcare Representative,entry,2025-03-28
+REQ0008,Research & Development,Healthcare Representative,entry,2025-03-31
+REQ0009,Research & Development,Healthcare Representative,entry,2024-02-02
+REQ0010,Research & Development,Healthcare Representative,entry,2025-06-09
+REQ0011,Research & Development,Healthcare Representative,entry,2025-07-17
+REQ0012,Research & Development,Healthcare Representative,entry,2025-08-11
+REQ0013,Research & Development,Healthcare Representative,entry,2025-02-07
+REQ0014,Research & Development,Healthcare Representative,entry,2025-08-04
+REQ0015,Research & Development,Healthcare Representative,entry,2025-02-15
+REQ0016,Research & Development,Healthcare Representative,entry,2025-07-25
+REQ0017,Research & Development,Healthcare Representative,entry,2024-02-25
+REQ0018,Research & Development,Laboratory Technician,entry,2024-03-28
+REQ0019,Research & Development,Laboratory Technician,entry,2025-07-26
+REQ0020,Research & Development,Laboratory Technician,entry,2024-06-07
+REQ0021,Research & Development,Laboratory Technician,entry,2025-01-17
+REQ0022,Research & Development,Laboratory Technician,entry,2024-08-31
+REQ0023,Research & Development,Laboratory Technician,entry,2025-03-18
+REQ0024,Research & Development,Laboratory Technician,entry,2025-01-19
+REQ0025,Research & Development,Laboratory Technician,entry,2024-05-27
+REQ0026,Research & Development,Laboratory Technician,entry,2025-06-16
+REQ0027,Research & Development,Laboratory Technician,entry,2025-06-22
+REQ0028,Research & Development,Laboratory Technician,entry,2025-07-24
+REQ0029,Research & Development,Laboratory Technician,entry,2024-04-13
+REQ0030,Research & Development,Laboratory Technician,entry,2025-04-23
+REQ0031,Research & Development,Laboratory Technician,entry,2025-02-08
+REQ0032,Research & Development,Laboratory Technician,entry,2024-08-18
+REQ0033,Research & Development,Laboratory Technician,entry,2024-05-29
+REQ0034,Research & Development,Laboratory Technician,entry,2025-07-27
+REQ0035,Research & Development,Laboratory Technician,entry,2024-12-30
+REQ0036,Research & Development,Laboratory Technician,entry,2024-04-26
+REQ0037,Research & Development,Laboratory Technician,entry,2024-08-05
+REQ0038,Research & Development,Laboratory Technician,entry,2025-06-21
+REQ0039,Research & Development,Laboratory Technician,entry,2024-09-30
+REQ0040,Research & Development,Manager,senior,2025-03-12
+REQ0041,Research & Development,Manager,senior,2024-10-26
+REQ0042,Research & Development,Manager,senior,2024-12-06
+REQ0043,Research & Development,Manager,senior,2024-05-18
+REQ0044,Research & Development,Manufacturing Director,senior,2025-07-27
+REQ0045,Research & Development,Manufacturing Director,senior,2025-02-27
+REQ0046,Research & Development,Manufacturing Director,senior,2025-06-20
+REQ0047,Research & Development,Manufacturing Director,senior,2024-04-18
+REQ0048,Research & Development,Manufacturing Director,senior,2024-08-03
+REQ0049,Research & Development,Manufacturing Director,senior,2024-03-02
+REQ0050,Research & Development,Manufacturing Director,senior,2024-02-03
+REQ0051,Research & Development,Manufacturing Director,senior,2025-01-14
+REQ0052,Research & Development,Manufacturing Director,senior,2025-08-26
+REQ0053,Research & Development,Manufacturing Director,senior,2024-11-30
+REQ0054,Research & Development,Manufacturing Director,senior,2025-03-01
+REQ0055,Research & Development,Manufacturing Director,senior,2025-02-04
+REQ0056,Research & Development,Research Director,senior,2024-12-11
+REQ0057,Research & Development,Research Director,senior,2024-03-24
+REQ0058,Research & Development,Research Director,senior,2024-04-29
+REQ0059,Research & Development,Research Director,senior,2024-08-18
+REQ0060,Research & Development,Research Director,senior,2025-01-07
+REQ0061,Research & Development,Research Director,senior,2024-10-30
+REQ0062,Research & Development,Research Director,senior,2024-09-29
+REQ0063,Research & Development,Research Scientist,entry,2024-11-26
+REQ0064,Research & Development,Research Scientist,entry,2024-10-19
+REQ0065,Research & Development,Research Scientist,entry,2024-04-28
+REQ0066,Research & Development,Research Scientist,entry,2025-08-04
+REQ0067,Research & Development,Research Scientist,entry,2025-01-14
+REQ0068,Research & Development,Research Scientist,entry,2025-04-19
+REQ0069,Research & Development,Research Scientist,entry,2024-10-21
+REQ0070,Research & Development,Research Scientist,entry,2024-03-14
+REQ0071,Research & Development,Research Scientist,entry,2025-01-19
+REQ0072,Research & Development,Research Scientist,entry,2025-08-31
+REQ0073,Research & Development,Research Scientist,entry,2024-09-26
+REQ0074,Research & Development,Research Scientist,entry,2025-01-10
+REQ0075,Research & Development,Research Scientist,entry,2025-04-29
+REQ0076,Research & Development,Research Scientist,entry,2025-05-04
+REQ0077,Research & Development,Research Scientist,entry,2025-05-11
+REQ0078,Research & Development,Research Scientist,entry,2024-11-15
+REQ0079,Research & Development,Research Scientist,entry,2024-04-24
+REQ0080,Research & Development,Research Scientist,entry,2024-08-06
+REQ0081,Research & Development,Research Scientist,entry,2025-07-27
+REQ0082,Research & Development,Research Scientist,entry,2024-01-18
+REQ0083,Research & Development,Research Scientist,entry,2025-02-16
+REQ0084,Research & Development,Research Scientist,entry,2025-08-24
+REQ0085,Research & Development,Research Scientist,entry,2024-02-13
+REQ0086,Research & Development,Research Scientist,entry,2025-08-27
+REQ0087,Sales,Manager,senior,2024-05-09
+REQ0088,Sales,Manager,senior,2024-06-07
+REQ0089,Sales,Manager,senior,2025-05-30
+REQ0090,Sales,Sales Executive,entry,2025-01-13
+REQ0091,Sales,Sales Executive,entry,2024-10-02
+REQ0092,Sales,Sales Executive,entry,2024-07-20
+REQ0093,Sales,Sales Executive,entry,2025-08-03
+REQ0094,Sales,Sales Executive,entry,2024-05-14
+REQ0095,Sales,Sales Executive,entry,2024-06-14
+REQ0096,Sales,Sales Executive,entry,2025-02-03
+REQ0097,Sales,Sales Executive,entry,2025-05-13
+REQ0098,Sales,Sales Executive,entry,2025-01-04
+REQ0099,Sales,Sales Executive,entry,2024-07-21
+REQ0100,Sales,Sales Executive,entry,2025-07-21
+REQ0101,Sales,Sales Executive,entry,2025-05-03
+REQ0102,Sales,Sales Executive,entry,2024-08-08
+REQ0103,Sales,Sales Executive,entry,2024-05-23
+REQ0104,Sales,Sales Executive,entry,2025-06-28
+REQ0105,Sales,Sales Executive,entry,2025-03-02
+REQ0106,Sales,Sales Executive,entry,2025-04-14
+REQ0107,Sales,Sales Executive,entry,2024-02-08
+REQ0108,Sales,Sales Executive,entry,2025-03-08
+REQ0109,Sales,Sales Executive,entry,2024-10-14
+REQ0110,Sales,Sales Executive,entry,2025-03-08
+REQ0111,Sales,Sales Executive,entry,2024-06-19
+REQ0112,Sales,Sales Executive,entry,2024-07-15
+REQ0113,Sales,Sales Executive,entry,2025-08-06
+REQ0114,Sales,Sales Executive,entry,2025-08-27
+REQ0115,Sales,Sales Executive,entry,2024-12-16
+REQ0116,Sales,Sales Executive,entry,2025-05-04
+REQ0117,Sales,Sales Representative,entry,2025-07-10
+REQ0118,Sales,Sales Representative,entry,2025-07-01
+REQ0119,Sales,Sales Representative,entry,2025-04-14
+REQ0120,Sales,Sales Representative,entry,2025-02-08
+REQ0121,Sales,Sales Representative,entry,2025-07-16
+REQ0122,Sales,Sales Representative,entry,2025-03-13
+REQ0123,Sales,Sales Representative,entry,2025-02-19

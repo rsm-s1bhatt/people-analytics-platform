@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dq_stage_skips
+    description: >
+      Applications that reached a later stage with no record of an earlier one. A row here
+      points to a gap in the upstream recruiting system to raise with its owners.
+    data_tests:
+      - is_empty:
+          config:
+            severity: warn
+  - name: dq_hires_without_offer
+    description: Hires with no matching offer record.
+    data_tests:
+      - is_empty:
+          config:
+            severity: warn
+  - name: dq_events_out_of_order
+    description: Stage events dated earlier than the stage before them.
+    data_tests:
+      - is_empty:
+          config:
+            severity: warn
+  - name: dq_summary
+    description: One row per data-quality check with the number of flagged records.
+    columns:
+      - name: check_name
+        data_tests: [unique, not_null]

@@ -1,0 +1,66 @@
+name: dbt CI
+
+# Runs every model and data test on each pull request and push to main, and once a
+# week on a schedule so upstream data problems surface even when the code hasn't changed.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 14 * * 1"   # Mondays 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate synthetic recruiting data
+        run: python scripts/generate_recruiting_funnel.py
+
+      - name: Build models and run all data tests
+        # Fails the run (and blocks the PR) if any error-level test fails.
+        # Data-quality checks are set to warn, so they report upstream gaps without blocking.
+        run: dbt build --profiles-dir .
+
+      - name: Show data-quality summary
+        if: always()
+        run: |
+          python -c "import duckdb; print(duckdb.connect('target/people_analytics.duckdb', read_only=True).sql('select * from dq_summary'))"
+
+      - name: Generate documentation site
+        run: |
+          dbt docs generate --profiles-dir . --static
+          mkdir -p site && cp target/static_index.html site/index.html
+
+      - name: Upload docs as a Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-docs:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy dbt docs to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

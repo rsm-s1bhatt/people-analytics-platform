@@ -1,0 +1,26 @@
+-- One row per employee from the IBM sample data, renamed to snake_case and typed.
+select
+    cast(EmployeeNumber as integer)            as employee_id,
+    Department                                 as department,
+    JobRole                                    as job_role,
+    cast(JobLevel as integer)                  as job_level,
+    cast(Age as integer)                       as age,
+    Gender                                     as gender,
+    EducationField                             as education_field,
+    MaritalStatus                              as marital_status,
+    BusinessTravel                             as business_travel,
+    OverTime = 'Yes'                           as works_overtime,
+    cast(MonthlyIncome as integer)             as monthly_income,
+    cast(PercentSalaryHike as integer)         as percent_salary_hike,
+    cast(PerformanceRating as integer)         as performance_rating,
+    cast(JobSatisfaction as integer)           as job_satisfaction,
+    cast(EnvironmentSatisfaction as integer)   as environment_satisfaction,
+    cast(WorkLifeBalance as integer)           as work_life_balance,
+    cast(TrainingTimesLastYear as integer)     as trainings_last_year,
+    cast(TotalWorkingYears as integer)         as total_working_years,
+    cast(YearsAtCompany as integer)            as years_at_company,
+    cast(YearsInCurrentRole as integer)        as years_in_current_role,
+    cast(YearsSinceLastPromotion as integer)   as years_since_last_promotion,
+    cast(YearsWithCurrManager as integer)      as years_with_current_manager,
+    Attrition = 'Yes'                          as has_left
+from {{ source('ibm_hr', 'ibm_hr_attrition') }}

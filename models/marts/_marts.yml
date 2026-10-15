@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: Employee dimension with tenure and pay bands, for slicing attrition.
+    columns:
+      - name: employee_id
+        data_tests: [unique, not_null]
+      - name: tenure_band
+        data_tests: [not_null]
+
+  - name: fct_attrition_by_segment
+    description: >
+      Attrition rate for each department, role, tenure band and overtime combination.
+      Use this to answer "where are we losing people?"
+    columns:
+      - name: attrition_rate
+        description: Share of the segment that has left (0 to 1).
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 1
+      - name: headcount
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 1
+
+  - name: fct_applications
+    description: >
+      One row per application: source, the furthest stage reached, and days from
+      application to screen, offer and hire.
+    columns:
+      - name: application_id
+        data_tests: [unique, not_null]
+      - name: department
+        description: Department of the requisition. Null would mean an application to an unknown requisition.
+        data_tests: [not_null]
+      - name: days_to_hire
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 365
+              config:
+                severity: warn
+
+  - name: fct_hiring_funnel
+    description: >
+      How many candidates reached each stage, by department and role, with conversion
+      from the prior stage and from the top of the funnel.
+    columns:
+      - name: conversion_from_applied
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 1
+
+  - name: fct_time_to_hire
+    description: Median and average days to hire, offers extended and offer acceptance rate by department.
+    columns:
+      - name: department
+        data_tests: [unique, not_null]
+      - name: offer_acceptance_rate
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 1

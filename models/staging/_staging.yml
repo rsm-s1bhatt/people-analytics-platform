@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_ibm__employees
+    description: One row per employee from the IBM sample dataset, renamed and typed.
+    columns:
+      - name: employee_id
+        description: IBM EmployeeNumber.
+        data_tests: [unique, not_null]
+      - name: monthly_income
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+      - name: years_at_company
+        data_tests:
+          - accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 60
+  - name: stg_recruiting__requisitions
+    description: One row per job requisition (synthetic).
+    columns:
+      - name: requisition_id
+        data_tests: [unique, not_null]
+  - name: stg_recruiting__applications
+    description: One row per application to a requisition (synthetic).
+    columns:
+      - name: application_id
+        data_tests: [unique, not_null]
+  - name: stg_recruiting__stage_events
+    description: One row per stage an application reached, with the expected stage order.
+    columns:
+      - name: stage_order
+        data_tests: [not_null]
+  - name: stg_recruiting__offers
+    description: One row per offer extended (synthetic).
+    columns:
+      - name: application_id
+        data_tests:
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_recruiting__applications')
+                field: application_id

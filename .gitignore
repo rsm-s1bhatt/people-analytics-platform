@@ -1,0 +1,8 @@
+target/
+dbt_packages/
+logs/
+*.duckdb
+__pycache__/
+exports/*.csv
+site/
+.user.yml
